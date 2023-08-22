@@ -12,3 +12,13 @@ void	split_init_stacks(t_stack **stacks, int len)
 	(*stacks)->topa = -1;
 	(*stacks)->topb = -1;
 }
+
+int	split_len(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+		i++;
+	return (i);
+}

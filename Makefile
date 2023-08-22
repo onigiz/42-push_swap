@@ -29,4 +29,9 @@ fclean: clean
 
 re: fclean all
 
+norm:
+	norminette *.[ch]
+	make -C ft_printf norm
+	make -C libft norm
+
 .PHONY: all clean fclean re
