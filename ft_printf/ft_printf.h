@@ -20,7 +20,7 @@
 int	kind(char a, va_list args);
 int	ft_printf(const char *s, ...);
 int	ft_print_str(char *str);
-int	ft_strlen(const char *s);
+size_t _strlen(const char *s);
 int	hex_putnbr(unsigned int n, char *hex);
 int	unsigned_putnbr(unsigned int n);
 int	ft_point_print(unsigned long n, char *hex);
