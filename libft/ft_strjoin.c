@@ -1,60 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: onigiz <onigiz@student.42istanbul.com.tr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/15 16:29:50 by onigiz            #+#    #+#             */
-/*   Updated: 2023/08/22 18:08:36 by onigiz           ###   ########.fr       */
+/*   Created: 2023/02/26 19:46:00 by onigiz            #+#    #+#             */
+/*   Updated: 2023/02/26 19:46:02 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_putchar(char c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	write(1, &c, 1);
-	return (1);
-}
+	char	*str;
+	size_t	i;
+	size_t	j;
+	size_t	tempsize;
 
-int	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
-}
-
-int	ft_print_str(char *str)
-{
-	int	i;
-
-	i = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	tempsize = (ft_strlen(s1) + ft_strlen(s2));
+	str = malloc(sizeof(char) * tempsize + 1);
 	if (str == NULL)
-	{
-		ft_putstr("(null)");
-		return (6);
-	}
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-	return (i);
-}
-
-int	ft_strlen(const char *s)
-{
-	int	i;
-
+		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
+	j = 0;
+	while (s1[i])
+	{
+		str[i] = s1[i];
 		i++;
-	return (i);
+	}
+	while (s2[j])
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	return (str);
 }
