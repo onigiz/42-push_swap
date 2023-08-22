@@ -1,4 +1,4 @@
-SRCS = main.c 
+SRCS = main.c init_setup.c utils.c
 OBJS = $(SRCS:.c=.o)
 NAME = push_swap
 FT_PRINTF = ft_printf/libftprintf.a

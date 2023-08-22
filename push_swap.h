@@ -4,14 +4,17 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "limits.h"
+# include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
 
-typedef struct s_stack
-{
+typedef struct s_stack{
 	int	*stacka;
 	int	*stackb;
 	int	topa;
 	int	topb;
 }	t_stack;
+
+void	initial_split(t_stack **stacks, int len);//initializng stacks
+
 
 #endif
