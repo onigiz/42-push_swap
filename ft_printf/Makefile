@@ -21,16 +21,20 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 
-all:		${NAME}
+all: ${NAME}
 
-$(NAME):	${OBJS}
-			ar rc ${NAME} ${OBJS}
+$(NAME): ${OBJS}
+	@ar rc ${NAME} ${OBJS}
 
 clean:
-			rm -f $(OBJS)
+	@rm -f $(OBJS)
 
-fclean:		clean
-			rm -f $(NAME)
+fclean:	clean
+	@rm -f $(NAME)
 
-re:			fclean ${NAME}
+re:	fclean ${NAME}
+
+norm:
+	norminette *.[ch]
+	
 .PHONY: clean fclean all re

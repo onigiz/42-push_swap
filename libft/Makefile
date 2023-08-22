@@ -47,15 +47,15 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -crs $(NAME) $(OBJS)
+	@ar -crs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
-re:fclean $(NAME)
+re: fclean $(NAME)
 
 norm:
 	norminette *.[ch]
