@@ -30,8 +30,8 @@ fclean: clean
 re: fclean all
 
 norm:
-	@make -C ft_printf norm
-	@make -C libft norm
-	@norminette *.[ch]
+	make -C ft_printf norm
+	make -C libft norm
+	norminette *.[ch]
 
 .PHONY: all clean fclean re
