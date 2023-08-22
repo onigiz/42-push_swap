@@ -15,6 +15,7 @@ typedef struct s_stack{
 }	t_stack;
 
 void	initial_split(t_stack **stacks, int len);//initializng stacks
-
+void    error_handle(t_stack *stacks);
+void    all_free(t_stack *stacks);
 
 #endif
