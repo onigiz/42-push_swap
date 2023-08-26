@@ -28,6 +28,7 @@ void	result_checker(long result, t_stack *stacks)
 
 //Atoi, double ile return ediliyor, sınır değerleri için ve int'i 
 //aldıktan sonra sayı dışı bir şey varsa diye kontrol sağlıyor
+//Hata olursa stack'e yazımda sorun olacağı için stack hafızasını freeliyor. 
 long	ft_atol_st(const char *str, t_stack *stacks)
 {
 	int		i;
