@@ -1,16 +1,17 @@
 #include "push_swap.h"
 
-
-
-
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    (void) ac;
-    t_stack *stack_try;
+	t_stack	*stacks;
 
-    stack_try->stacka = ft_split(av[1], ' ');
-    char *str = stack_try->stacka; 
-    
-    ft_printf("%d\n", stack_try->stacka[0]);
-    
+	if (ac > 1)
+	{
+        //stack a set edilisin
+		stacks = check_and_initialize(ac, av);
+        //sıralama yapılsın
+		start_sorting(stacks);
+        //Tüm kullanılan belleği sıfırla
+		free_all(stacks);
+	}
+	return (0);
 }

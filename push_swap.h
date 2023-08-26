@@ -21,5 +21,11 @@ int		split_len(char **split);
 long	ft_atol_st(const char *str, t_stack *stacks);
 void	result_checker(long result, t_stack *stacks);
 t_stack	*split_and_check(char **av);
+void	args_init_stacks(t_stack **stacks, int ac);
+t_stack	*args_and_check(int ac, char **av);
+char	**connect_args(int ac, char **av);
+void	check_duplicates(t_stack *stacks);
+t_stack	*check_and_initialize(int ac, char **av);
+void	start_sorting(t_stack *stacks);
 
 #endif
