@@ -27,5 +27,16 @@ char	**connect_args(int ac, char **av);
 void	check_duplicates(t_stack *stacks);
 t_stack	*check_and_initialize(int ac, char **av);
 void	start_sorting(t_stack *stacks);
+void	sa(int *stacka, int top);
+void    sb(int *stackb, int top);
+void    ss(t_stack *stacks);
+void    pb(t_stack *stacks);
+void    pa(t_stack *stacks);
+void    ra(int *stacka, int top);
+void    rb(int *stackb, int top);
+void    rr(t_stack *stacks);
+void    rra(int *stacka, int top);
+void    rrb(int *stackb, int top);
+void    rrr(t_stack *stacks);
 
 #endif
