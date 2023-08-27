@@ -11,7 +11,7 @@ int	main(int ac, char **av)
         //sıralama yapılsın
 		start_sorting(stacks);
         //Tüm kullanılan belleği sıfırla
-		free_all(stacks);
+		all_free(stacks);
 	}
 	return (0);
 }

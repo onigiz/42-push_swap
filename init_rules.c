@@ -75,7 +75,7 @@ void	start_sorting(t_stack *stacks)
     //Aynı elemanlı durumlarda hata ver, çıkış yap.
 	if (is_sorted(stacks) == 1)
 	{
-		free_all(stacks);
+		all_free(stacks);
 		exit(1);
 	}//topa + 1 sayısında sıralanacak eleman var
 	else if (stacks->topa == 1)
