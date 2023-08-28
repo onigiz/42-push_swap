@@ -37,6 +37,14 @@ void    rb(int *stackb, int top);
 void    rr(t_stack *stacks);
 void    rra(int *stacka, int top);
 void    rrb(int *stackb, int top);
-void    rrr(t_stack *stacks);
+void	rrr(t_stack *stacks);
+int		closest_position_stacka(t_stack *stacks, int now);
+int		max_position_stacka(t_stack *stacks);
+int		min_position_stacka(t_stack *stacks);
+void    three_sort(t_stack *stacks);
+void    four_sort(t_stack *stacks);
+void    five_sort(t_stack *stacks);
+void	print_stack(t_stack *stacks);
+int		is_sorted(t_stack *stacks);
 
 #endif

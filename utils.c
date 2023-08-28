@@ -56,4 +56,7 @@ long	ft_atol_st(const char *str, t_stack *stacks)
 	if (!(str[i] <= '9' && str[i] >= '0') && str[i])
 		error_handle(stacks);
 	return (result * n);
+
+	
+
 }

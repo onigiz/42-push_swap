@@ -7,11 +7,11 @@ void	args_init_stacks(t_stack **stacks, int ac)
 {
 	(*stacks) = malloc(sizeof(t_stack));
 	if (!(*stacks))
-		ft_error((*stacks));
+		error_handle((*stacks));
 	(*stacks)->stacka = malloc(sizeof(int) * (ac));
 	(*stacks)->stackb = malloc(sizeof(int) * (ac));
 	if (!(*stacks)->stacka || !(*stacks)->stackb)
-		ft_error((*stacks));
+		error_handle((*stacks));
 	(*stacks)->topa = -1;
 	(*stacks)->topb = -1;
 }
@@ -29,7 +29,7 @@ t_stack	*args_and_check(int ac, char **av)
 	while (i < ac)
 	{
 		stacks->topa++;
-		stacks->stacka[i] = ft_atol(av[ac - i - 1], stacks);
+		stacks->stacka[i] = ft_atol_st(av[ac - i - 1], stacks);
 		i++;
 	}
 	while (i >= 0)

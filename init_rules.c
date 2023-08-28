@@ -34,7 +34,7 @@ void	check_duplicates(t_stack *stacks)
 		while (j <= stacks->topa)
 		{
 			if (stacks->stacka[i] == stacks->stacka[j])
-				ft_error(stacks);
+				error_handle(stacks);
 			j++;
 		}
 		i++;
@@ -52,7 +52,7 @@ t_stack	*check_and_initialize(int ac, char **av)
 	new_av = NULL;
 	new_av_len = 0;
 	if (ac < 2)
-		ft_error(stacks);
+		error_handle(stacks);
 	else if (ac == 2)
         //birinci argumanı böl ve a stackini başlat
 		stacks = split_and_check(av);
@@ -86,6 +86,6 @@ void	start_sorting(t_stack *stacks)
 		four_sort(stacks);
 	else if (stacks->topa == 4)
 		five_sort(stacks);
-	else
-		big_sort(stacks);
+	/* else
+		big_sort(stacks); */
 }

@@ -30,7 +30,7 @@ void    rb(int *stackb, int top)
 
 void    rr(t_stack *stacks)
 {
-    ra(stacks->stacka, topa);
-    rb(stacks->stackb, topb);
+    ra(stacks->stacka, stacks->topa);
+    rb(stacks->stackb, stacks->topb);
     ft_printf("rrr\n");
 }
