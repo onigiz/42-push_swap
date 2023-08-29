@@ -8,12 +8,12 @@ int	main(int ac, char **av)
 	{
         //stack a set edilisin
 		stacks = check_and_initialize(ac, av);
-		ft_printf("[0]: %d\n", stacks->stacka[0]);
+		
 		print_stack(stacks);
-		ft_printf("*********************");
+		ft_printf("****************");
         //sıralama yapılsın
-			start_sorting(stacks);
-		ft_printf("*********************");
+		start_sorting(stacks);
+		ft_printf("****************");
 		print_stack(stacks);
 
         //Tüm kullanılan belleği sıfırla

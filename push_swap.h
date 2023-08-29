@@ -48,6 +48,11 @@ void	print_stack(t_stack *stacks);
 int		is_sorted(t_stack *stacks);
 int		get_max_stacka(t_stack *stacks);
 int		get_min_stacka(t_stack *stacks);
-int		calculate_instruction_cost(t_stack *stacks, int current);
+int		stack_cost(t_stack *stacks, int temp_index, long temp_cost, int top);
+void	big_sort(t_stack *stacks);
+int		find_cheapest(t_stack *stacks);
+void    get_top(t_stack *stacks, int index);
+void    push_and_place(t_stack *stacks, int pos);
+void    get_min_to_top(t_stack *stacks);
 
 #endif

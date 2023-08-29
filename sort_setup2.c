@@ -34,15 +34,23 @@ int get_min_stacka(t_stack *stacks)
     return (min);
 }
 
-int stack_cost(t_stack *stacks, int temp_index, long temp_cost, int top)
+int stack_costb(t_stack *stacks, int temp_index, long temp_cost)
 {
     if (stacks->topb / 2 >= temp_index)
         temp_cost += temp_index + 1;
     else if (stacks->topb < temp_index)
-        temp_cost += top - temp_index;
+        temp_cost += stacks->topb - temp_index;
     return(temp_cost);
 }
 
+int stack_costa(t_stack *stacks, int a_pivot, long temp_cost)
+{
+    if (stacks->topb / 2 >= a_pivot)
+        temp_cost += a_pivot+ 1;
+    else if (stacks->topb < a_pivot)
+        temp_cost += stacks->topb - a_pivot;
+    return(temp_cost);
+}
 
 //B stackinde en az maliyeti olan sayının indexini return ediyor
 int find_cheapest(t_stack *stacks)
@@ -61,10 +69,10 @@ int find_cheapest(t_stack *stacks)
     while (temp_index <= stacks->topb)
     {
         //b'nin en üstüne çıkış
-        temp_cost = stack_cost(stacks, temp_index, temp_cost, stacks->topb);
+        temp_cost = stack_costb(stacks, temp_index, temp_cost);
         //a'da doğru yere koymak için a üzerinde ra/rra işlemi yapılmalı
         a_pivot = next_stacka(stacks, stacks->stackb[temp_index]);
-        temp_cost = stack_cost(stacks, a_pivot, temp_cost, stacks->topa);
+        temp_cost = stack_costa(stacks, a_pivot, temp_cost);
         //a'ya push
         temp_cost++;
         if (cost > temp_cost)
