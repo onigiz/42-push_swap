@@ -1,19 +1,21 @@
 #include "push_swap.h"
 
-int closest_position_stacka(t_stack *stacks, int now)
+
+//current'tan büyük en küçük sayının indexi return ediliyor
+int next_stacka(t_stack *stacks, int current)
 {
     int c;//counter
-    int index;//now'a en yakın, now'dan büyük, sayının indexi
-    long temp;//now'a en yakın, now'dan büyük sayı
+    int index;
+    long temp;
 
     c = 0;
     index = 0;
-    temp = LONG_MAX;//long olmasının sebebi çok büyük sayılarla hesaplama yapılabilecek olması?
+    pivot = LONG_MAX;//long olmasının sebebi çok büyük sayılarla hesaplama yapılabilecek olması?
     while (c <= stacks->topa)
     {
-        if ((stacks->stacka[c] > now) && (stacks->stacka[c] < temp))
+        if ((stacks->stacka[c] > current) && (stacks->stacka[c] < pivot))
         {
-            temp = stacks->stacka[c];
+            pivot = stacks->stacka[c];
             index = c;
         }
         c++;
