@@ -1,16 +1,5 @@
 #include "push_swap.h"
 
-//Free everything
-void    all_free(t_stack *stacks)
-{
-    free(stacks->stacka);
-    stacks->stacka = NULL;
-    free(stacks->stackb);
-    stacks->stackb = NULL;
-    free(stacks);
-    stacks = NULL;
-}
-
 //Hata kontrolü
 void    error_handle(t_stack *stacks)
 {

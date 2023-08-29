@@ -9,7 +9,7 @@ int next_stacka(t_stack *stacks, int current)
 {
     int c;//counter
     int index;
-    long temp;
+    long pivot;
 
     c = 0;
     index = 0;
@@ -26,6 +26,7 @@ int next_stacka(t_stack *stacks, int current)
     return(index);
 }
 
+//stack a'daki en büyük sayının pozisyonu
 int max_position_stacka(t_stack *stacks)
 {
     int c;
@@ -47,6 +48,8 @@ int max_position_stacka(t_stack *stacks)
     return(index);
 }
 
+
+//stack a'daki en küçük sayının pozisyonu
 int min_position_stacka(t_stack *stacks)
 {
     int c;

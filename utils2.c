@@ -9,6 +9,17 @@ void	print_stack(t_stack *stacks)
 		ft_printf("%d\n", stacks->stacka[i]);
 }
 
+//Free everything
+void    all_free(t_stack *stacks)
+{
+    free(stacks->stacka);
+    stacks->stacka = NULL;
+    free(stacks->stackb);
+    stacks->stackb = NULL;
+    free(stacks);
+    stacks = NULL;
+}
+
 //i, j'den küçük olursa 1 return eder(i alttaki, j üstteki)
 int	is_sorted(t_stack *stacks)
 {

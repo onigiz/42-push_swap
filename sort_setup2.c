@@ -6,7 +6,7 @@ int get_max_stacka(t_stack *stacks)
     int index;
     int max;
 
-    i = 0;
+    index = 0;
     max = stacks->stacka[index];
     while (index <= stacks->topa)
     {
@@ -23,7 +23,7 @@ int get_min_stacka(t_stack *stacks)
     int index;
     int min;
 
-    i = 0;
+    index = 0;
     min = stacks->stacka[index];
     while (index <= stacks->topa)
     {
@@ -34,33 +34,47 @@ int get_min_stacka(t_stack *stacks)
     return (min);
 }
 
-
-int calculate_instruction_cost(t_stack *stacks, int current)
+int stack_cost(t_stack *stacks, int temp_index, long temp_cost, int top)
 {
-    int min_val;
-    int max_val;
-    int min_index;
-    int next_index;
-    int cost;
+    if (stacks->topb / 2 >= temp_index)
+        temp_cost += temp_index + 1;
+    else if (stacks->topb < temp_index)
+        temp_cost += top - temp_index;
+    return(temp_cost);
+}
 
-    min_val = get_min_stacka(stacks);
-    max_val = get_max_stacka(stacks);
-    min_index = min_position_stacka(stacks);
-    next_index = next_stacka(stacks, current);//next bigger value in stack
-    cost = 0;
-    if (current < min_val || current > max_val)
+
+//B stackinde en az maliyeti olan sayının indexini return ediyor
+int find_cheapest(t_stack *stacks)
+{
+    int     index;
+    long    cost;
+    long    temp_cost;
+    int     temp_index;
+    //a'da koyulacak yeri belirleyeceğiz
+    int     a_pivot;
+
+    a_pivot = 0;
+    temp_index = 0;
+    temp_cost = 0;
+    cost = LONG_MAX;
+    while (temp_index <= stacks->topb)
     {
-        if (min_index >= stacks->topa /2)
-            cost += stacks->topa - min_val;
-        else
-            cost += min_val + 1;
+        //b'nin en üstüne çıkış
+        temp_cost = stack_cost(stacks, temp_index, temp_cost, stacks->topb);
+        //a'da doğru yere koymak için a üzerinde ra/rra işlemi yapılmalı
+        a_pivot = next_stacka(stacks, stacks->stackb[temp_index]);
+        temp_cost = stack_cost(stacks, a_pivot, temp_cost, stacks->topa);
+        //a'ya push
+        temp_cost++;
+        if (cost > temp_cost)
+        {
+            index = temp_index;
+            cost = temp_cost;
+        }
+        temp_cost = 0;
+        a_pivot = 0;
+        temp_index++;
     }
-    else
-    {
-		if (next_index >= stacks->topa / 2)
-			cost += stacks->topa - next_index;
-		else
-			cost += next_index + 1;
-	}
-    return (cost);
+    return(index);
 }
