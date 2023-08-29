@@ -2,6 +2,9 @@
 
 
 //current'tan büyük en küçük sayının indexi return ediliyor
+//pivot max long değerinden başlıyor ve giderek küçülüyor
+//aranan sayının pivottan küçük olması şartı ile pivot sürekli güncelleniyor
+//bu sayede sürekli daralan bir aralıkta arama yapılıyor
 int next_stacka(t_stack *stacks, int current)
 {
     int c;//counter
