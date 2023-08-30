@@ -1,4 +1,18 @@
-SRCS = main.c init_rules.c init_setup.c init_setup2.c utils.c utils2.c sorting_rules1.c sorting_rules2.c sorting_rules3.c sorting_rules4.c sort_setup.c sort_setup2.c sort_setup3.c big_sort.c mini_sorts.c 
+SRCS = main.c  \
+		init_rules.c \
+		init_setup.c \
+		init_setup2.c \
+		utils.c \
+		utils2.c \
+		sorting_rules1.c \
+		sorting_rules2.c \
+		sorting_rules3.c \
+		sorting_rules4.c \
+		sort_setup.c \
+		sort_setup2.c \
+		mini_sorts.c 
+
+
 OBJS = $(SRCS:.c=.o)
 NAME = push_swap
 FT_PRINTF = ft_printf/libftprintf.a

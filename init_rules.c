@@ -86,6 +86,6 @@ void	start_sorting(t_stack *stacks)
 		four_sort(stacks);
 	else if (stacks->topa == 4)
 		five_sort(stacks);
-	else
-		big_sort(stacks);
+	/* else
+		big_sort(stacks); */
 }

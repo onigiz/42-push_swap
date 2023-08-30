@@ -51,8 +51,5 @@ int		get_min_stacka(t_stack *stacks);
 int		stack_cost(t_stack *stacks, int temp_index, long temp_cost, int top);
 void	big_sort(t_stack *stacks);
 int		find_cheapest(t_stack *stacks);
-void    get_top(t_stack *stacks, int index);
-void    push_and_place(t_stack *stacks, int pos);
-void    get_min_to_top(t_stack *stacks);
 
 #endif
