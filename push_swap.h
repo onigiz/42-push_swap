@@ -46,10 +46,14 @@ void    four_sort(t_stack *stacks);
 void    five_sort(t_stack *stacks);
 void	print_stack(t_stack *stacks);
 int		is_sorted(t_stack *stacks);
-int		get_max_stacka(t_stack *stacks);
-int		get_min_stacka(t_stack *stacks);
-int		stack_cost(t_stack *stacks, int temp_index, long temp_cost, int top);
-void	big_sort(t_stack *stacks);
-int		find_cheapest(t_stack *stacks);
+int		max_stacka(t_stack *stacks);
+int		min_stacka(t_stack *stacks);
+int		totop_stacka(t_stack *stacks, int current);
+int		totop_stackb(t_stack *stacks, int counter, int cost);
+int		choose_most_efficient(t_stack *stacks);
+void    go_top_stacka(t_stack *stacks, int index);
+void    go_top_stackb(t_stack *stacks, int  best_index);
+void    select_and_place(t_stack *stacks, int best_index);
+void    big_sort(t_stack *stacks);
 
 #endif

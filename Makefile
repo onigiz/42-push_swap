@@ -10,7 +10,10 @@ SRCS = main.c  \
 		sorting_rules4.c \
 		sort_setup.c \
 		sort_setup2.c \
-		mini_sorts.c 
+		sort_setup3.c \
+		sort_setup4.c \
+		mini_sorts.c \
+		big_sort.c
 
 
 OBJS = $(SRCS:.c=.o)

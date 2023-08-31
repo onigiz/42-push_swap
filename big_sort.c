@@ -2,26 +2,34 @@
 
 void    big_sort(t_stack *stacks)
 {
-    //b'deki uygun index
-    int index;
-    //a'daki uygun spot
-    int pos;
+    int choosen;//b'den a'ya atılacak seçilmiş sayının pozisyonu
+    int max_index;//a stackteki max sayı
 
+    //5 sayı kalana kadar b'ye at, a'yı sırala, pivot alabileceğin bir sıralama olsun
     while (stacks->topa != 4)
     {
         pb(stacks);
     }
     five_sort(stacks);
+    //b stacki tamamen boşaltılana kadar devam et
     while (stacks->topb > -1)
     {
-        index = find_cheapest(stacks);
-        get_top(stacks, index);
-        //artık en üstte lazım olan sayı var b'de
-        pos = next_stacka(stacks, stacks->stackb[stacks->topb]);
-        //pos'un bir üstüne yerleştireceğiz
-        push_and_place(stacks, pos);
-        get_min_to_top(stacks);
+        //b'deki en düşük maliyetli sayıyı bul ve a'ya yerleştir
+        choosen = choose_most_efficient(stacks);
+        select_and_place(stacks, choosen);
     }
-
-    
+    max_index = max_position_stacka(stacks);
+    if (max_index >= stacks->topa / 2)
+    {
+        while (is_sorted(stacks) != 1)
+            ra(stacks->stacka, stacks->topa);
+        if (is_sorted(stacks) != 1)
+            ra(stacks->stacka, stacks->topa);
+    }
+    else
+    {
+        while (is_sorted(stacks) != 1)
+            rra(stacks->stacka, stacks->topa);
+    }
+        
 }
