@@ -3,7 +3,7 @@
 //Hata kontrolü
 void    error_handle(t_stack *stacks)
 {
-    ft_printf("Error!!");
+    write(2, "Error\n", 6);
     all_free(stacks);
     exit(1);
 }
