@@ -10,8 +10,6 @@ int	main(int ac, char **av)
 		stacks = check_and_initialize(ac, av);
         //sıralama yapılsın
 		start_sorting(stacks);
-		ft_printf("************************");
-		print_stack(stacks);
         //Tüm kullanılan belleği sıfırla
 		all_free(stacks);
 ;	}
