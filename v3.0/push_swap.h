@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 14:28:38 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/03 23:12:36 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/03 23:21:39 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-#include  "utils/utils.h"
+# include "utils/utils.h"
 
 void	pb(t_stack *stacks);
 void	pa(t_stack *stacks);
