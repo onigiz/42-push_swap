@@ -1,31 +1,36 @@
-SRCS = 
+SRCS = main.c \
+	sorting_algorithms/sorting_moves/push.c \
+	sorting_algorithms/sorting_moves/reverse_rotate.c \
+	sorting_algorithms/sorting_moves/rotate.c \
+	sorting_algorithms/sorting_moves/swap.c \
+
 		
 OBJS = $(SRCS:.c=.o)
 NAME = push_swap
-PRELIBRARY = PreLibrary/PreLibrary.a
+UTILS = utils/utils.a
 CFLAGS = -Werror -Wall -Wextra
 CC = gcc
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(SUB_UTILS)
-	$(CC) $(CFLAGS) -o push_swap $(OBJS) $(PRELIBRARY)
+$(NAME): $(OBJS) $(UTILS)
+	$(CC) $(CFLAGS) -o push_swap $(OBJS) $(UTILS)
 
-$(PRELIBRARY):
-	@make -C PreLibrary
+$(UTILS):
+	@make -C utils
 
 clean:
-	@make -C PreLibrary clean
+	@make -C utils clean
 	@rm -rf $(OBJS)
 
 fclean: clean
-	@make -C PreLibrary fclean
+	@make -C utils fclean
 	@rm -rf push_swap
 
 re: fclean all
 
 norm:
-	@make -C PreLibrary norm
+	@make -C utils norm
 	@norminette *.[ch]
 
 git: 
