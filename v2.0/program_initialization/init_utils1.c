@@ -31,8 +31,6 @@ long	fatol(const char *str, t_stack *stacks)
 
 	i = 0;
 	n = 1;
-	if (!str[i])
-		error(stacks);
 	while ((str[i] <= 13 && str[i] >= 9) || str[i] == 32)
 		i++;
 	if (str[i] == '-' || str[i] == '+')
@@ -41,6 +39,8 @@ long	fatol(const char *str, t_stack *stacks)
 			n *= -1;
 		i++;
 	}
+	if (!str[i])
+		error(stacks);
 	result = 0;
 	while (str[i] <= '9' && str[i] >= '0')
 	{

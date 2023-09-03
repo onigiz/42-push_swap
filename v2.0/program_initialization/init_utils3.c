@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 03:29:13 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/03 03:51:26 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/03 04:10:48 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	check_duplicates(t_stack *stacks)
 	}
 }
 
-t_stack *initialize_stacka(int ac, char **av)
+t_stack *initialize_stacks(int ac, char **av)
 {
     t_stack *stacks;
     char **new_av;

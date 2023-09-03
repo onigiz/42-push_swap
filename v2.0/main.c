@@ -1,18 +1,26 @@
 #include "push_swap.h"
-
 #include <stdio.h>
+
+void	print_stack(t_stack *stacks)
+{
+	int	i;
+
+	i = stacks->topa + 1;
+	while (i--)
+		printf("%d\n", stacks->stacka[i]);
+}
+
 int main(int ac, char **av)
 {
-    (void) ac;
-    
-    t_stack *stacks;
-    stacks = split_and_check(av);
-    printf("topa: %d\ntopb: %d\n", stacks->topa, stacks->topb);
-    int i = 0;
-    while (stacks->stacka[i])
+
+    if (ac > 1)
     {
-        printf("%d\n", stacks->stacka[i]);
-        i++;
+        t_stack *stacks;
+        
+        stacks = initialize_stacks(ac, av);
+        
+        print_stack(stacks);
+        all_free(stacks);
     }
-    all_free(stacks);
+    return (0);
 }
