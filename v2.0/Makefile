@@ -3,6 +3,9 @@ SRCS = main.c  \
 		sorting_moves/swap.c \
 		sorting_moves/rotate.c \
 		sorting_moves/reverse_rotate.c \
+		program_initialization/init_utils1.c \
+		program_initialization/init_utils2.c \
+		program_initialization/init_utils3.c \
 		
 OBJS = $(SRCS:.c=.o)
 NAME = push_swap
