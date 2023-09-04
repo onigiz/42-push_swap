@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 14:28:38 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/03 23:21:39 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/04 15:05:40 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,11 @@ void	rb_raw(int *stackb, int topb);
 void	ra(int *stacka, int topa);
 void	rb(int *stackb, int topb);
 void	rr(t_stack *stacks);
+
+void	init_stacks(t_stack **stacks, int len);
+t_stack	*split_and_check(char **av);
+t_stack *args_and_check(int ac, char **av);
+char **connect_args(int ac, char **av);
+t_stack *last_step_initialization(int ac, char **av);
 
 #endif

@@ -6,11 +6,11 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 16:20:19 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/01 18:50:09 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/04 14:50:20 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void	rra_raw(int *stacka, int topa)
 {

@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 22:33:48 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/03 22:33:49 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/04 14:53:58 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,23 @@ int	is_sorted(t_stack *stacks)
 		i++;
 	}
 	return (1);
+}
+
+void	stacka_check_duplicates(t_stack *stacks)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < stacks->topa)
+	{
+		j = i + 1;
+		while (j <= stacks->topa)
+		{
+			if (stacks->stacka[i] == stacks->stacka[j])
+				ferror(stacks);
+			j++;
+		}
+		i++;
+	}
 }

@@ -6,11 +6,11 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 16:01:59 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/03 23:03:04 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/04 14:50:08 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void	pb(t_stack *stacks)
 {

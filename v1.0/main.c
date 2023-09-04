@@ -9,7 +9,11 @@ int	main(int ac, char **av)
         //stack a set edilisin
 		stacks = check_and_initialize(ac, av);
         //sıralama yapılsın
-		start_sorting(stacks);
+			start_sorting(stacks);
+	
+
+
+
         //Tüm kullanılan belleği sıfırla
 		all_free(stacks);
 ;	}

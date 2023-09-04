@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 22:42:10 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/03 22:42:11 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/04 16:11:39 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,12 +66,12 @@ char	**fsplit(char *str, char c, int start, int i)
 			while (str[i] != c)
 				i++;
 			splitted[j] = fsubstr(str, start, i);
-			if (!splitted[j])
+			if(!splitted[j])
 				return (NULL);
-			j++;
+			j++;    
 		}
-		else
-			i++;
+	else 
+		i++;
 	}
 	return (splitted);
 }

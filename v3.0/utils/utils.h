@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 14:28:38 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/03 22:30:02 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/04 15:06:18 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void	ferror(t_stack *stacks);
 void	int_checker(long result, t_stack *stacks);
 int		is_sorted(t_stack *stacks);
 long	fatol(const char *str, t_stack *stacks);
+void	stacka_check_duplicates(t_stack *stacks);
 
 #endif

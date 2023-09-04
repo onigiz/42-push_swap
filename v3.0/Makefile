@@ -3,6 +3,9 @@ SRCS = main.c \
 	sorting_algorithms/sorting_moves/reverse_rotate.c \
 	sorting_algorithms/sorting_moves/rotate.c \
 	sorting_algorithms/sorting_moves/swap.c \
+	initialization/init_funcs1.c \
+	initialization/init_funcs2.c \
+	initialization/init_funcs3.c \
 
 		
 OBJS = $(SRCS:.c=.o)
