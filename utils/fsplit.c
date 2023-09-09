@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 15:39:55 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/10 01:29:16 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/10 01:42:57 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,6 @@ char	**fsplit(char *str, char c)
 			i++;
 		j++;
 	}
-	splitted[j] = '\0';
+	splitted[j] = NULL;
 	return (splitted);
 }

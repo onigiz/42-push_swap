@@ -36,5 +36,6 @@ int		word_count(char *str, char c);
 int		word_len(char *str, int i, char c);
 void	substr(char *str, int i, char c, char *cpy);
 char	**fsplit(char *str, char c);
+char    *fstrjoin(char *str1, char *str2);
 
 #endif

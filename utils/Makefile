@@ -6,12 +6,13 @@
 #    By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/01 03:39:10 by onigiz            #+#    #+#              #
-#    Updated: 2023/09/10 01:29:16 by onigiz           ###   ########.fr        #
+#    Updated: 2023/09/10 01:56:31 by onigiz           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 list = fatoi.c flen.c fprint.c int_checker.c free_all.c \
-		error_handle.c fsplit.c is_duplicate.c is_sorted.c
+		error_handle.c fsplit.c is_duplicate.c is_sorted.c \
+		fstrjoin.c
 
 OBJS = $(list:.c=.o)
 
