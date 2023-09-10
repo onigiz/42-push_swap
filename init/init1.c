@@ -6,11 +6,11 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 02:57:12 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/10 02:57:13 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/10 03:45:51 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	allocate_stacks(t_stack **stacks, int len)
 {
