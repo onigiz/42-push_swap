@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init1.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/10 02:57:12 by onigiz            #+#    #+#             */
+/*   Updated: 2023/09/10 02:57:13 by onigiz           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	allocate_stacks(t_stack **stacks, int len)
@@ -31,16 +43,26 @@ char **splitted_str1av(char **av)
     return(splitted);
 }
 
-/* char **splitted_str_multi(int ac, char **av)
+t_stack *one_arg_init(char **av)
 {
+    t_stack *stacks;
+    char **splitted;
     int i;
-    char *str;
+    int len;
 
     i = 0;
-    str = NULL;
-    while (i < ac)
+    stacks = NULL;
+    splitted = splitted_str1av(av);
+    len = flen2d(splitted);
+    allocate_stacks(&stacks, len);
+    while (splitted[i])
     {
-        str = 
+        stacks->stacka[i] = fatoi(splitted[len - i - 1]);
+        free (splitted[len - 1 - i]);
+        stacks->topa++;
+        i++;
     }
-    
-} */
+    free(splitted);
+    return (stacks);
+}
+

@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 01:48:26 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/10 01:56:06 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/10 03:41:13 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ char    *fstrjoin(char *str1, char *str2)
     char *joined;
     int i;
     int j;
-
+    
+    if (!str1 || !str2)
+		return (NULL);
     joined = malloc(sizeof(char) * (flen(str1) + flen(str2) + 1));
     if (!joined)
         return (NULL);
@@ -29,5 +31,7 @@ char    *fstrjoin(char *str1, char *str2)
     while (str2[i])
         joined[j++]= str2[i++];
     joined[j] = '\0';
+    free(str1);
+    free(str2);
     return (joined);
 }

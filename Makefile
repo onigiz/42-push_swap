@@ -1,6 +1,6 @@
 SRCS = main.c \
 		sorting_moves/push.c sorting_moves/reverse_rotate.c sorting_moves/rotate.c sorting_moves/swap.c \
-		init1.c
+		init1.c init2.c
 
 		
 OBJS = $(SRCS:.c=.o)

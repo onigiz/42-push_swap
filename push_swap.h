@@ -6,7 +6,7 @@
 /*   By: onigiz <onigiz@student.42istanbul.com.t    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 14:28:38 by onigiz            #+#    #+#             */
-/*   Updated: 2023/09/10 01:41:41 by onigiz           ###   ########.fr       */
+/*   Updated: 2023/09/10 03:23:50 by onigiz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,9 @@ void	rr(t_stack *stacks);
 void	allocate_stacks(t_stack **stacks, int len);
 int flen2d(char **str);
 char **splitted_str1av(char **av);
+t_stack *one_arg_init(char **av);
+t_stack *multi_arg_init(int ac, char **av);
+char **multi_str(int ac, char **av);
+t_stack *multi_arg_init(int ac, char **av);
 
 #endif
